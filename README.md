@@ -12,11 +12,11 @@ Ontem assisti uma aula de Introdução ao Javascript, e em certo momento, a prof
 
 Pausei o vídeo, fui pra fora, pensando... como poderia implementar um contador que me fizesse avançar um pouco mais, aprender mais?
 
-## Vamos ao código
-
 Daí me veio a ideia de um **display de 7 segmentos**, nunca havia feito um. Este display é formado por 7 partes, nomeadas de "a" a "g", como na figura. Estes segmentos podem estar iluminados ou apagados, formando os números que queremos.
 
 ![7-segments display](docs/mic0434_0003.png?raw=true)
+
+## Vamos ao código
 
 O primeiro desafio que encontrei neste projeto foi criar a estrutura do HTML + CSS que deixasse cada segmento no formato hexagonal que eu desejava. A solução que eu encontrei foi semelhante a que usamos para fazer um [triângulo](https://medium.com/horadecodar/como-fazer-um-tri%C3%A2ngulo-com-css-8621d57f4d35), mas neste caso são 2 trapézios verticais e 2 horizontais.
 
@@ -60,6 +60,6 @@ Para alterar o contador na tela do cliente, precisei da coleção de elementos H
 E ficou pronto o meu contador!!! 😁
 ![js](docs/counter.gif?raw=true)
 
-> **Para testar [https://tpabarbosa.github.io/indiana-genius-game/](https://tpabarbosa.github.io/indiana-genius-game/)**
+> **Para testar [https://tpabarbosa.github.io/criando-um-contador/](https://tpabarbosa.github.io/criando-um-contador/)**
 
 Eu mesma não parei por aí! Tentei outra solução parecida com a que ocorre nos circuitos eletrônicos, mas fica para outra hora... para quem se interessar:[BCD to 7-Segment Display Decoder – Construction, Circuit & Operation](https://www.electricaltechnology.org/2018/05/bcd-to-7-segment-display-decoder.html)
