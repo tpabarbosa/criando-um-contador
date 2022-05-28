@@ -8,9 +8,11 @@ De qualquer forma, decidi largar tudo e me atirar. Neste momento estou fazendo a
 
 E acontece com frequência de me deparar com aulas que trazem conceitos "simples" - simples para mim, que já os estudei e os pratiquei, é claro!. Mas tento extrair dali, do simples, algo que possa me fazer avançar.
 
-Ontem assisti uma aula de introdução ao Javascript, e em certo momento, a professora propõe a criação de um contador. Existem 2 botões, um para aumentar o valor e um para diminuir o valor, e um elemento para mostrar o valor do contador.
+Ontem assisti uma aula de Introdução ao Javascript, e em certo momento, a professora propõe a criação de um contador. Existem 2 botões, um para aumentar o valor e um para diminuir o valor, e um elemento para mostrar o valor do contador.
 
 Pausei o vídeo, fui pra fora, pensando... como poderia implementar um contador que me fizesse avançar um pouco mais, aprender mais?
+
+## Vamos ao código
 
 Daí me veio a ideia de um **display de 7 segmentos**, nunca havia feito um. Este display é formado por 7 partes, nomeadas de "a" a "g", como na figura. Estes segmentos podem estar iluminados ou apagados, formando os números que queremos.
 
@@ -27,12 +29,15 @@ No código a seguir, a classe `seg-h` forma um trapézio horizontal enquanto a c
 Também criei uma classe para dar o efeito de "iluminar" o segmento. Eu queria não só aplicar uma cor viva para representar o estado iluminado, mas também queria uma sombra que simulasse a luz se dispersando. Aqui o desafio foi aplicar o filtro `drop-shadow`, uma vez que o `box-shadow` não funcionou como eu desejava:
 
 - Sem nenhum tipo de sombra:
+
   ![7-segments display zero](docs/zero_without_shadow.png?raw=true)
 
 - Com `box-shadow`:
+
   ![7-segments display zero](docs/zero_with_box_shadow.png?raw=true)
 
 - Com `filter: drop-shadow`:
+
   ![7-segments display zero](docs/zero.png?raw=true)
 
   ![segment css](docs/segment_css_on.png?raw=true)
