@@ -1,14 +1,16 @@
-# Mas é apenas um contador...
+# Mas é apenas mais um contador Javascript...
+
+![js](docs/Countdown_on_the_traffic_lights.jpg?raw=true)
 
 Recentemente decidi dar uma grande virada na minha vida. Fui professora ao longo dos últimos 18 anos, mas atingindo a maioridade, e impulsionada pela quarentena, concluí que era hora de retomar uma grande paixão: a programação!
 
 Não posso dizer que sou iniciante nesta área, afinal sempre flertei com ela, às vezes mais, às vezes menos, mas sempre me mantive praticando esta "arte". Tão pouco posso dizer que sou experiente, pois nunca trabalhei na área, a não ser pra mim mesma, ou pra alguns amigos próximos.
 
-De qualquer forma, decidi largar tudo e me atirar. Neste momento estou fazendo alguns cursos e bootcamps, afinal preciso "provar" que possuo alguma qualificação, já que fui sempre autodidata nesta área.
+De qualquer forma, decidi largar tudo e me atirar. Neste momento estou fazendo alguns cursos e _bootcamps_, afinal preciso "provar" que possuo alguma qualificação, já que fui sempre autodidata nesta área.
 
 E acontece com frequência de me deparar com aulas que trazem conceitos "simples" - simples para mim, que já os estudei e os pratiquei, é claro!. Mas tento extrair dali, do simples, algo que possa me fazer avançar.
 
-Ontem assisti uma aula de Introdução ao Javascript, e em certo momento, a professora propõe a criação de um contador. Existem 2 botões, um para aumentar o valor e um para diminuir o valor, e um elemento para mostrar o valor do contador.
+Ontem assisti a uma aula de Introdução ao Javascript, e em certo momento, a professora propõe a criação de um contador. Pela proposta são 2 botões, um para aumentar o valor e um para diminui-lo, e um elemento para mostrar o valor do contador.
 
 Pausei o vídeo, fui pra fora, pensando... como poderia implementar um contador que me fizesse avançar um pouco mais, aprender mais?
 
@@ -16,9 +18,13 @@ Daí me veio a ideia de um **display de 7 segmentos**, nunca havia feito um. Est
 
 ![7-segments display](docs/mic0434_0003.png?raw=true)
 
-## Vamos ao código
+## Vamos aos códigos
 
-O primeiro desafio que encontrei neste projeto foi criar a estrutura do HTML + CSS que deixasse cada segmento no formato hexagonal que eu desejava. A solução que eu encontrei foi semelhante a que usamos para fazer um [triângulo](https://medium.com/horadecodar/como-fazer-um-tri%C3%A2ngulo-com-css-8621d57f4d35), mas neste caso são 2 trapézios verticais e 2 horizontais.
+O primeiro desafio que encontrei neste projeto foi criar a estrutura do HTML + CSS que deixasse cada segmento no formato que eu desejava:
+![7-segments display](docs/display.png?raw=true) ![7-segments display](docs/segment-v.png?raw=true) ![7-segments display](docs/segment-h.png?raw=true)
+
+A solução que encontrei foi semelhante a que usamos para fazer um [triângulo](https://medium.com/horadecodar/como-fazer-um-tri%C3%A2ngulo-com-css-8621d57f4d35), mas neste caso cada segmento é formado por 2 trapézios verticais ou 2 horizontais, que se juntam formando o hexágono que eu queria.
+![7-segments display](docs/segment-v-2.png?raw=true) ![7-segments display](docs/segment-h-2.png?raw=true)
 
 No código a seguir, a classe `seg-h` forma um trapézio horizontal enquanto a classe `seg-compl` forma um trapézio horizontal com a base invertida, deslocado para se encaixar no primeiro. De maneira análoga, `seg-v` é um trapézio vertical e `seg-compl` é invertido em relação à ele. As classes `seg-a`, `seg-b`, ..., `seg-g` simplesmente posicionam os segmentos nos lugares corretos.
 
@@ -45,21 +51,42 @@ Também criei uma classe para dar o efeito de "iluminar" o segmento. Eu queria n
 Para cada dígito, o HTML final ficou assim, apenas variando o `id`:
 ![segment css](docs/digit_html.png?raw=true)
 
-Finalizado HTML + CSS, agora era hora de dar vida ao contador utilizando o Javascript. Comecei criando uma variável global para guardar o valor do contador e também as funções que são chamadas quando o cliente clica nos botões para aumentar e diminuir este valor:
+## Javascript, afinal!
+
+Finalizado HTML + CSS, agora é hora de dar vida ao contador utilizando o Javascript.
+
+Comecei criando uma variável global para guardar o valor do contador e também as funções que são chamadas quando o cliente clica nos botões para aumentar e diminuir este valor:
 
 ![js](docs/buttons_js.png?raw=true)
 
-Cada uma das funções anteriores chama a função de atualização que muda a variável global, avalia se o número tem um ou 2 dígitos e chama a função que é responsável por ligar ou desligar cada um dos segmentos conforme o dígito e o algarismo.
+Cada uma das funções anteriores chama a função de atualização que:
 
-Para alterar o contador na tela do cliente, precisei da coleção de elementos HTML que representam os segmentos de cada um dos dígitos. Também utilizei uma constante que contém a informação de quais segmentos devem ser iluminados para cada algarismo:
+- altera a variável global,
+- avalia se o número tem um ou dois dígitos, e
+- chama para cada dígito uma função que é responsável por iluminar cada um dos segmentos do algarismo que deve ser mostrado.
+
+Para, finalmente, alterar o contador na tela do cliente, precisei da coleção de elementos HTML que representam os segmentos de cada um dos dígitos e utilizei uma constante que contém a informação de quais segmentos devem ser iluminados para cada algarismo:
 
 ![js](docs/update_js.png?raw=true)
 ![js](docs/digit_js.png?raw=true)
 ![js](docs/constant_js.png?raw=true)
 
-E ficou pronto o meu contador!!! 😁
+## E ficou pronto o meu contador!!! 😁
+
 ![js](docs/counter.gif?raw=true)
 
-> **Para testar [https://tpabarbosa.github.io/criando-um-contador/](https://tpabarbosa.github.io/criando-um-contador/)**
+> **Para testar: [https://tpabarbosa.github.io/criando-um-contador/](https://tpabarbosa.github.io/criando-um-contador/)**
+>
+> **Código completo: [https://github.com/tpabarbosa/criando-um-contador](https://github.com/tpabarbosa/criando-um-contador)**
 
-Eu mesma não parei por aí! Tentei outra solução parecida com a que ocorre nos circuitos eletrônicos, mas fica para outra hora... para quem se interessar:[BCD to 7-Segment Display Decoder – Construction, Circuit & Operation](https://www.electricaltechnology.org/2018/05/bcd-to-7-segment-display-decoder.html)
+## Sempre podemos ir além
+
+Eu não parei por aí! Melhorei um pouco o código, fiz esse texto e até implementei outra solução completamente diferente.
+
+Essa outra solução é parecida com a que ocorre nos circuitos eletrônicos, a explicação fica para outra hora, por que daí já é muita complexidade pra resolver um problema tão pequeno... para quem se interessar: [BCD to 7-Segment Display Decoder – Construction, Circuit & Operation](https://www.electricaltechnology.org/2018/05/bcd-to-7-segment-display-decoder.html)
+
+#### Crédito da imagem de capa:
+
+Date 28 January 2010, 09:32
+Source [Countdown on the traffic lights](https://www.flickr.com/photos/renaissancechambara/4311329050/)
+Author [Ged Carroll](https://www.flickr.com/people/39435232@N00)
