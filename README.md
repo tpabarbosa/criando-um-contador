@@ -21,9 +21,11 @@ Daí me veio a ideia de um **display de 7 segmentos**, nunca havia feito um. Est
 ## Vamos aos códigos
 
 O primeiro desafio que encontrei neste projeto foi criar a estrutura do HTML + CSS que deixasse cada segmento no formato que eu desejava:
+
 ![7-segments display](docs/display.png?raw=true) ![7-segments display](docs/segment-v.png?raw=true) ![7-segments display](docs/segment-h.png?raw=true)
 
 A solução que encontrei foi semelhante a que usamos para fazer um [triângulo](https://medium.com/horadecodar/como-fazer-um-tri%C3%A2ngulo-com-css-8621d57f4d35), mas neste caso cada segmento é formado por 2 trapézios verticais ou 2 horizontais, que se juntam formando o hexágono que eu queria.
+
 ![7-segments display](docs/segment-v-2.png?raw=true) ![7-segments display](docs/segment-h-2.png?raw=true)
 
 No código a seguir, a classe `seg-h` forma um trapézio horizontal enquanto a classe `seg-compl` forma um trapézio horizontal com a base invertida, deslocado para se encaixar no primeiro. De maneira análoga, `seg-v` é um trapézio vertical e `seg-compl` é invertido em relação à ele. As classes `seg-a`, `seg-b`, ..., `seg-g` simplesmente posicionam os segmentos nos lugares corretos.
@@ -51,7 +53,7 @@ Também criei uma classe para dar o efeito de "iluminar" o segmento. Eu queria n
 Para cada dígito, o HTML final ficou assim, apenas variando o `id`:
 ![segment css](docs/digit_html.png?raw=true)
 
-## Javascript, afinal!
+## Javascript!
 
 Finalizado HTML + CSS, agora é hora de dar vida ao contador utilizando o Javascript.
 
