@@ -1,0 +1,155 @@
+body {
+    font-family: 'Permanent Marker', cursive;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 95vh;
+}
+
+h1 {
+    text-align: center;
+    color: #09ff09;
+    font-size: 42px;
+    padding: 0 12px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    margin: 24px auto;
+    position: relative;
+    bottom: 0;
+    width: 90%;
+}
+
+#buttons button {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    font-size: 42px;
+    margin: 0 12px;
+    transition: all 0.2s ease-in;
+}
+
+#buttons button:hover {
+    background-color: #09ff09;
+}
+
+#digits {
+    margin: 0 auto;
+    height: 250px;
+    width: 90%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.digit {
+    width: 120px;
+    margin: 0 12px
+    /* transform: skew(170deg); */
+}
+
+.segments {
+    position: relative;
+}
+
+.seg-h,
+.seg-v {
+    position: absolute;
+    transition: all 0.2s linear;
+}
+
+.seg-compl {
+    display: block;
+    position: absolute;
+    transition: all 0.2s linear;
+}
+
+.seg-h {
+    width: 72px;
+    left: 13px;
+    border-bottom: 12px solid #002107;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+}
+
+.seg-v {
+    height: 72px;
+    width: 0;
+    border-right: 12px solid #002107;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+
+.seg-h .seg-compl {
+    top: 12px;
+    left: -12px;
+    right: -12px;
+    border-top: 12px solid #002107;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+}
+
+.seg-v .seg-compl {
+    left: 12px;
+    height: 72px;
+    margin-top: -12px;
+    border-left: 12px solid #002107;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+
+.seg-a {
+    top: 0;
+}
+
+.seg-b {
+    top: 13px;
+    left: 98px;
+}
+
+.seg-c {
+    top: 111px;
+    left: 98px;
+}
+
+.seg-d {
+    top: 196px;
+}
+
+.seg-e {
+    top: 111px;
+    left: 0px;
+}
+
+.seg-f {
+    top: 13px;
+    left: 0px;
+}
+
+.seg-g {
+    top: 98px;
+}
+
+.seg-h.on {
+    border-bottom-color: #09ff09;
+    filter: drop-shadow(0px 0px 8px #09ff09);
+}
+
+.seg-v.on {
+    border-right-color: #09ff09;
+    filter: drop-shadow(0px 0px 8px #09ff09);
+}
+
+.seg-h.on .seg-compl {
+    border-top-color: #09ff09;
+}
+
+.seg-v.on .seg-compl {
+    border-left-color: #09ff09;
+}
